@@ -1,0 +1,27 @@
+###
+POST http://localhost:3977/api/v1/users/user HTTP/1.1
+Content-Type: application/json
+
+{
+  "name" : "Laura Carolina",
+  "lastname" : "Candamil Cortes",
+  "email": "laurac.candamilc@autonoma.edu.co",
+  "active": "Si"
+}
+
+###
+GET http://localhost:3977/api/v1/users HTTP/1.1
+
+###
+GET http://localhost:3977/api/v1/users/626f47e02d01b3996747de52 HTTP/1.1
+
+###
+PUT http://localhost:3977/api/v1/users/626f47e02d01b3996747de52 HTTP/1.1
+Content-Type: application/json
+
+{
+    "active": "No"
+}
+
+###
+DELETE  http://localhost:3977/api/v1/users/626f47e02d01b3996747de52 HTTP/1.1
