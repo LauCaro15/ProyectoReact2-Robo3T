@@ -1,23 +1,15 @@
 const mongoose = require('mongoose');
-const userBillSchema = mongoose.Schema ({
-    name: {
-        type: String,
-        require: true,
-        min: 3,
-    },
-    lastname: {
-        type: String,
-        require: true,
-        min: 3,
-    },
+const userSchema = mongoose.Schema ({
+    name: String,
+    lastname: String,
     email: {
         type: String,
         require: true,
     },
-    active: {
-        type: String,
-        require: true,
-    },
+    password: String,
+    role: String,
+    active: Boolean,
+    avator: String,
 });
 
-module.exports = mongoose.model('UserBillCollection', userBillSchema);
+module.exports = mongoose.model('User', userSchema);
