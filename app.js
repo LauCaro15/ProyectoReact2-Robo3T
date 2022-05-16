@@ -4,12 +4,13 @@ const bodyParser = require("body-parser");
 const app = express();
 const { API_VERSION } = require("./config");
 
-const userRoutes = require("./src/routes/user.router");
+const userRoutes = require("./src/routes/user");
 
-app.use(bodyParser.urlencoded({ extended: false}));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-app.use(`/api/${ API_VERSION }`, userRoutes);
+/* Creación de los endpoint del proyecto */
+app.use(`/api/${API_VERSION}`, userRoutes);
 
-/* Configuración de los header HTTP */
+/* Condiguración de los header HTTP */
 module.exports = app;
