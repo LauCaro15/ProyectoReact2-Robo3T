@@ -41,4 +41,10 @@ function signUp(req, res) {
     }
   }
 }
+
+function login(req, res) {
+  const user = new User();
+  const { email, password} = req.body;
+  
+}
 module.exports = { signUp };

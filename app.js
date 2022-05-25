@@ -4,7 +4,9 @@ const cors = require("cors")
 
 const app = express();
 const { API_VERSION } = require("./config");
+
 const userRoutes = require("./src/routes/user");
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 /*Evitar bloqueo del CORS*/
